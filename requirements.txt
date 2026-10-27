@@ -1,0 +1,8 @@
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scikit-learn>=1.4.2 
+imbalanced-learn>=0.12.3
+pytest>=7.4.0
+flake8>=6.1.0
