@@ -258,3 +258,37 @@ def evaluate_sampler_and_model(
         "Training Time (s)": round(training_time, 4),
         "Resampled Shape": dict(Counter(y_res))
     }
+
+# ==========================================
+# 6. HÀM LƯU KẾT QUẢ VÀO THƯ MỤC OUTPUTS/
+# ==========================================
+def get_output_dirs():
+    """Trả về đường dẫn thư mục outputs/figures và outputs/tables."""
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    fig_dir = os.path.join(root_dir, "outputs", "figures")
+    tab_dir = os.path.join(root_dir, "outputs", "tables")
+    os.makedirs(fig_dir, exist_ok=True)
+    os.makedirs(tab_dir, exist_ok=True)
+    return fig_dir, tab_dir
+
+
+def save_figure(fig, filename, dpi=300):
+    """Lưu đồ thị matplotlib vào outputs/figures/ với độ phân giải cao (300 DPI)."""
+    fig_dir, _ = get_output_dirs()
+    if not filename.endswith(".png"):
+        filename += ".png"
+    filepath = os.path.join(fig_dir, filename)
+    fig.savefig(filepath, dpi=dpi, bbox_inches="tight")
+    print(f"Đã lưu đồ thị tại: {filepath}")
+    return filepath
+
+
+def save_table(df, filename):
+    """Lưu bảng kết quả DataFrame vào outputs/tables/ dưới dạng CSV."""
+    _, tab_dir = get_output_dirs()
+    if not filename.endswith(".csv"):
+        filename += ".csv"
+    filepath = os.path.join(tab_dir, filename)
+    df.to_csv(filepath, index=False, encoding="utf-8-sig")
+    print(f"Đã lưu bảng số liệu tại: {filepath}")
+    return filepath
