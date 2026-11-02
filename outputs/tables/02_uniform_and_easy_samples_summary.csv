@@ -1,0 +1,5 @@
+﻿Algorithm,Before - Class 0,Before - Class 1,After - Class 0,After - Class 1,Samples before,Samples after,Reduction (%),Sampling time (s)
+Random UnderSampling (RUS),7920,80,80,80,8000,160,98.0,0.004
+Cluster Centroids,7920,80,80,80,8000,160,98.0,0.0391
+Condensed Nearest Neighbours (CNN),7920,80,160,80,8000,240,97.0,0.9471
+One-Sided Selection (OSS),7920,80,3350,80,8000,3430,57.12,0.0301
