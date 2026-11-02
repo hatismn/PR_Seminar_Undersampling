@@ -1,0 +1,7 @@
+﻿Method,Model,Threshold,PR-AUC,F2,Precision,Recall,Training Time (s),Resampled Shape
+NoSampling,LogisticRegression,0.5,0.7547,0.625,0.8438,0.587,0.0178,"{np.int64(0): 2832, np.int64(1): 185}"
+NoSampling,RandomForest,0.5,0.9834,0.852,0.9744,0.8261,0.4555,"{np.int64(0): 2832, np.int64(1): 185}"
+SMOTEENN,LogisticRegression,0.5,0.6781,0.6709,0.3256,0.913,0.3236,"{np.int64(0): 2617, np.int64(1): 2796}"
+SMOTEENN,RandomForest,0.5,0.9485,0.9454,0.8333,0.9783,1.0674,"{np.int64(0): 2617, np.int64(1): 2796}"
+SMOTETomek,LogisticRegression,0.5,0.6818,0.6833,0.3534,0.8913,0.3227,"{np.int64(0): 2828, np.int64(1): 2828}"
+SMOTETomek,RandomForest,0.5,0.9722,0.9442,0.898,0.9565,1.1515,"{np.int64(0): 2828, np.int64(1): 2828}"
