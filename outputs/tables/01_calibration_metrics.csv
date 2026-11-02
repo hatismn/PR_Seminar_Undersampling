@@ -1,0 +1,6 @@
+﻿Configuration,True Positive Prior,Mean Predicted Prob,Prob Bias (|Mean - Prior|),Brier Score (Lower is better),PR-AUC
+Baseline (No Undersampling),0.01,0.0091,0.0009,0.0074,0.4092
+RUS 1:1 (Uncalibrated - Lệch nặng),0.01,0.2381,0.2281,0.0882,0.4241
+RUS + Dal Pozzolo Correction,0.01,0.0052,0.0048,0.0086,0.4241
+RUS + Platt's Scaling (Sigmoid),0.01,0.0093,0.0007,0.0073,0.4241
+RUS + Isotonic Regression,0.01,0.009,0.001,0.0077,0.3783
